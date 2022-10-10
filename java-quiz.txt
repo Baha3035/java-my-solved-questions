@@ -1,0 +1,217 @@
+//importing Scanner class  
+import java.util.Scanner;  
+  
+public class FactorialUsingWhileLoop {  
+    public static void main(String[] args) {  
+          
+        //declaring and intializing variables   
+        int fact = 1;  
+        int i = 1;  
+  
+        //creating object of Scanner class  
+        Scanner sc = new Scanner(System.in);  
+  
+        //accepting a number from the user  
+        System.out.println("Enter a number whose factorial is to be found: ");  
+        int num = sc.nextInt();  
+          
+        //counting the factorial using while loop  
+        while( i <= num ){  
+            fact = fact * i;   
+            i++; //increment i by 1   
+        }     
+  
+        //printing the result  
+        System.out.println("\nFactorial of " + num + " is: " + fact);  
+    }  
+}
+
+
+import java.util.Scanner;
+
+class ReverseNumberWhile
+
+{
+
+public static void main(String args[])
+
+{
+
+int num=0;
+
+int reversenum =0;
+
+System.out.println("Input your number and press enter: ");
+
+//This statement will capture the user input
+
+Scanner in = new Scanner(System.in);
+
+//Captured input would be stored in number num
+
+num = in.nextInt();
+
+//While Loop: Logic to find out the reverse number
+
+while( num != 0 )
+
+{
+
+reversenum = reversenum * 10;
+
+reversenum = reversenum + num%10;
+
+num = num/10;
+
+}
+
+System.out.println("Reverse of input number is: "+reversenum);
+
+}
+
+}
+
+
+import java.util.Scanner;
+ 
+public class JavaLoopExcercise
+{
+    public static void main(String[] args)
+    {
+        Scanner console = new Scanner(System.in);
+ 
+        int number;
+        char choice;
+        int even = 0;
+        int odd = 0;
+ 
+        do
+        {
+            System.out.print("Enter any number ");
+            number = console.nextInt();
+ 
+            if( number % 2 == 0)
+            {
+                even += number;
+            }
+            else
+            {
+                odd += number;
+            }
+ 
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+ 
+        }while(choice=='y' || choice == 'Y');
+ 
+        System.out.println("Sum of even numbers: " + even);
+        System.out.println("Sum of odd numbers: " + odd);
+    }  
+}
+
+
+import java.util.Scanner;
+public class TestClock {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int sum = 0;
+    char op;
+    do{
+      System.out.println("Enter two numbers");
+      int num1= in.nextInt();
+      int num2 = in.nextInt();
+      sum = sum+num1+num2;
+      System.out.println("Do you wish to perform another operation, Y/N");
+      op =in.next().charAt(0);
+    }while(op =='Y'||op=='y');
+    System.out.println("sum "+sum);
+  }
+}
+
+
+
+import java.util.Scanner;
+ 
+public class JavaLoopExcercise
+{
+    public static void main(String[] args)
+    {
+        Scanner console = new Scanner(System.in);
+ 
+        int number,          
+            countPositive = 0, 
+            countNegative = 0,
+            countZero = 0;
+ 
+        char choice;
+ 
+        do
+        {
+            System.out.print("Enter the number ");
+            number = console.nextInt();
+ 
+            if(number > 0)
+            {
+                countPositive++;
+            }
+            else if(number < 0)
+            {
+                countNegative++;
+            }
+            else
+            {
+                countZero++;
+            }
+ 
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+ 
+        }while(choice=='y' || choice == 'Y');
+ 
+        System.out.println("Positive numbers: " + countPositive);
+        System.out.println("Negative numbers: " + countNegative);
+        System.out.println("Zero numbers: " + countZero);
+    }  
+}
+
+
+
+import java.util.Scanner;
+ 
+public class JavaLoopExcercise
+{
+    public static void main(String[] args)
+    {
+        Scanner console = new Scanner(System.in);
+ 
+        int number;
+        int max = Integer.MIN_VALUE;  
+        int min = Integer.MAX_VALUE;  
+ 
+        char choice;
+ 
+        do
+        {
+            System.out.print("Enter the number ");
+            number = console.nextInt();
+ 
+            if(number > max)
+            {
+                max = number;
+            }
+ 
+            if(number < min)
+            {
+                min = number;
+            }
+ 
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+ 
+        }while(choice=='y' || choice == 'Y');
+ 
+        System.out.println("Largest number: " + max);
+        System.out.println("Smallest number: " + min);
+    }  
+}
+
